@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <title>Javascript training</title>
+  </head>
+  <body>
+    <div class="w-75 m-auto py-5">
+      <label class="font-italic" for="productName">productName </label>
+      <input type="text" class="form-control" id="productName" />
+
+      <label class="font-italic" for="productPrice ">productPrice </label>
+      <input type="text" class="form-control" id="productPrice" />
+
+      <label class="font-italic" for="ProductCategory">ProductCategory</label>
+      <input type="text" class="form-control" id="productCategory" />
+
+      <label class="font-italic" for="ProductDescription"
+        >ProductDescription</label
+      >
+      <input type="text" class="form-control" id="productDescription" />
+
+      <button onclick="addProduct()" class="btn-danger my-3">Add Product</button>
+     
+      <div class="container">
+        <input onkeyup="searchProduct(this.value)" class=" w-75 m-4" placeholder="Search" />
+      </div>
+    
+    </div>
+
+    
+    <table class="text-center w-75 m-auto p-5 table-active">
+      <thead class="text-center" id="tableHead">
+        <th>index</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Category</th>
+        <th>Product Description</th>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

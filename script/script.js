@@ -30,6 +30,7 @@ var productName = document.getElementById("productName");
 var productPrice = document.getElementById("productPrice");
 var productCategory = document.getElementById("productCategory");
 var productDescription = document.getElementById("productDescription");
+var mainButton = document.getElementById("mainBtn");
 
 var products; //we changed this from var products = []; to this.
 if (localStorage.getItem("listOfProducts") == null) {
@@ -53,6 +54,7 @@ function addProduct() {
     display();
     localStorage.setItem("listOfProducts", JSON.stringify(products));
     console.log(localStorage.length);
+    mainButton.innerHTML = "Add Product";
   } else {
     alert("U need to fill all the fields!");
   }
@@ -115,7 +117,7 @@ function updateForm(idx) {
     productCategory: products[idx].category,
     productDescription: products[idx].description,
   };
-
+  mainButton.innerHTML = "Update";
   document.getElementById("productName").value = product.productName;
   document.getElementById("productPrice").value = product.productPrice;
   document.getElementById("productCategory").value = product.productCategory;

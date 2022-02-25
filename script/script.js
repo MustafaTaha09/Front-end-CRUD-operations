@@ -73,7 +73,7 @@ function display() {
         <td>${products[i].category}</td>
         <td>${products[i].description}</td>
         <td><button onclick = "updateForm(${i})" class="btn-info mr-auto">Update</button></td>
-        <td><button onclick = "deleteProduct(${i})" class="btn-warning mr-auto">Delete</button></td></tr>`;
+        <td><button onclick = "deleteProduct(${i})" class="btn-danger mr-auto">Delete</button></td></tr>`;
   }
   console.log(cartoona);
   document.getElementById("tableBody").innerHTML = cartoona;
